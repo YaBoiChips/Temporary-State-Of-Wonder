@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "tsow",
+  "version": "${version}",
+  "name": "Temporary State Of Wonder",
+  "description": "stuff",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/tsow/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "yaboichips.tsow.client.TSoWClient"
+    ],
+    "main": [
+      "yaboichips.tsow.TSoW"
+    ]
+  },
+  "mixins": [
+    "tsow.mixins.json",
+    {
+      "config": "tsow.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
