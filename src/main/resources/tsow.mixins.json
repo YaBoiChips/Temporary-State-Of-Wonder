@@ -4,6 +4,7 @@
   "package": "yaboichips.tsow.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "PigMixin"
   ],
   "injectors": {
     "defaultRequire": 1

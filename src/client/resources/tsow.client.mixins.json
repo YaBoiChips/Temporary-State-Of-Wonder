@@ -1,9 +1,10 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "yaboichips.tsow.mixin.client",
+  "package": "yaboichips.tsow.client.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
+    "LevelRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
