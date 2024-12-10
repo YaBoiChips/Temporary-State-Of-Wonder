@@ -56,7 +56,6 @@ dependencies {
     modRuntimeOnly "curse.maven:cull-less-leaves-619718:5831042"
     modRuntimeOnly "maven.modrinth:sodium:mc1.21.1-0.6.3-fabric"
     modRuntimeOnly "maven.modrinth:iris:1.8.1+1.21.1-fabric"
-    modClientCompileOnly "maven.modrinth:axiom:4.2.0"
     modRuntimeOnly "dev.isxander:yet-another-config-lib:3.6.1+1.21-fabric"
     modImplementation "software.bernie.geckolib:geckolib-fabric-${minecraft_version}:${geckolib_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
