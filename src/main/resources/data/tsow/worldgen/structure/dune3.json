@@ -1,7 +1,7 @@
 {
   "type": "minecraft:jigsaw",
   "biomes": "tsow:abandonment",
-  "step": "raw_generation",
+  "step": "local_modifications",
   "spawn_overrides": {},
   "start_pool": "tsow:dune3",
   "size": 1,

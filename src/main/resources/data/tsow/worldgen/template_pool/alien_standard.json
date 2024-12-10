@@ -1,0 +1,15 @@
+{
+  "name": "tsow:alien",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "element": {
+        "location": "tsow:alien_standard",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      },
+      "weight": 1
+    }
+  ]
+}

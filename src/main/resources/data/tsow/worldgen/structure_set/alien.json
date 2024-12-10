@@ -1,22 +1,22 @@
 {
   "structures": [
     {
-      "structure": "tsow:dune1",
+      "structure": "tsow:alien_wide",
       "weight": 1
     },
     {
-      "structure": "tsow:dune2",
+      "structure": "tsow:alien_standard",
       "weight": 1
     },
     {
-      "structure": "tsow:dune3",
+      "structure": "tsow:alien_fallen",
       "weight": 1
     }
   ],
   "placement": {
     "type": "minecraft:random_spread",
     "spacing": 15,
-    "separation": 10,
-    "salt": 134343211456
+    "separation": 14,
+    "salt": 13986
   }
 }

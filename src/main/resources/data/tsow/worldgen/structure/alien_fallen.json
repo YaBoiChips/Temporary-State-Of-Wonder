@@ -1,9 +1,9 @@
 {
   "type": "minecraft:jigsaw",
   "biomes": "tsow:abandonment",
-  "step": "lakes",
+  "step": "surface_structures",
   "spawn_overrides": {},
-  "start_pool": "tsow:mountain1",
+  "start_pool": "tsow:alien_fallen",
   "size": 1,
   "start_height": {
     "absolute": -15
