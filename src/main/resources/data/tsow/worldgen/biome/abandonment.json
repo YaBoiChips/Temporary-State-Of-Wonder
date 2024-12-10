@@ -1,0 +1,22 @@
+{
+  "carvers": {},
+  "downfall": 0.9,
+  "effects": {
+    "fog_color": 12165723,
+    "foliage_color": 6975545,
+    "grass_color_modifier": "swamp",
+    "sky_color": 13289388,
+    "water_color": 6388580,
+    "water_fog_color": 2302743
+  },
+  "features": [
+    [
+      "minecraft:patch_dead_bush",
+      "tsow:sand_layer"
+    ]
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {},
+  "temperature": 0.8
+}

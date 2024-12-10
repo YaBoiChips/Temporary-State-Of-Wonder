@@ -1,0 +1,22 @@
+{
+  "structures": [
+    {
+      "structure": "tsow:dune1",
+      "weight": 1
+    },
+    {
+      "structure": "tsow:dune2",
+      "weight": 1
+    },
+    {
+      "structure": "tsow:dune3",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 16,
+    "separation": 12,
+    "salt": 13456
+  }
+}
