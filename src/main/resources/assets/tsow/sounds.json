@@ -1,0 +1,13 @@
+{
+  "clock_ambient": {
+    "sounds": [
+      "tsow:clock_ambient1",
+      "tsow:clock_ambient2"
+    ]
+  },
+  "clock_die": {
+    "sounds": [
+      "tsow:clock_die"
+    ]
+  }
+}

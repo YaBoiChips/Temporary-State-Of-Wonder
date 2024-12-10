@@ -1,0 +1,70 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.stasis_machine.run": {
+			"animation_length": 11.28,
+			"bones": {
+				"Main": {
+					"rotation": {
+						"2.84": {
+							"vector": [0, 0, 0]
+						},
+						"10.08": {
+							"vector": [0, -2485, 0],
+							"easing": "easeInCubic"
+						},
+						"11.28": {
+							"vector": [0, -2840, 0],
+							"easing": "easeOutQuad"
+						}
+					}
+				},
+				"N2": {
+					"rotation": {
+						"0.68": {
+							"vector": [0, 0, 0]
+						},
+						"1.36": {
+							"vector": [20, 0, 0],
+							"easing": "easeInQuad"
+						}
+					}
+				},
+				"E2": {
+					"rotation": {
+						"1.36": {
+							"vector": [0, 0, 0]
+						},
+						"2.16": {
+							"vector": [0, 0, -22.5],
+							"easing": "easeInCubic"
+						}
+					}
+				},
+				"W2": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.68": {
+							"vector": [0, 0, 20],
+							"easing": "easeInQuad"
+						}
+					}
+				},
+				"S2": {
+					"rotation": {
+						"2.16": {
+							"vector": [0, 0, 0]
+						},
+						"2.84": {
+							"vector": [-22.5, 0, 0],
+							"easing": "easeInCubic"
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

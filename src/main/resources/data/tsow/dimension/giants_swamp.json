@@ -1,0 +1,11 @@
+{
+  "type": "tsow:interstellar",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "tsow:giants_swamp",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "tsow:giants_swamp"
+    }
+  }
+}

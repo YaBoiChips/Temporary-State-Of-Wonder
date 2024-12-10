@@ -1,11 +1,11 @@
 {
-  "type": "minecraft:overworld",
+  "type": "tsow:interstellar",
   "generator": {
     "type": "minecraft:noise",
     "settings": "tsow:interstellar",
     "biome_source": {
       "type": "minecraft:fixed",
-      "biome": "minecraft:stony_shore"
+      "biome": "tsow:interstellar"
     }
   }
 }

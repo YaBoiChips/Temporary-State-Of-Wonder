@@ -1,0 +1,15 @@
+{
+  "name": "tsow:white_cube",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "element": {
+        "location": "tsow:white_cube",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      },
+      "weight": 1
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "temperature": 0,
+  "downfall": 0,
+  "has_precipitation": false,
+  "effects": {
+    "sky_color": 197379,
+    "fog_color": 3015513,
+    "water_color": 0,
+    "water_fog_color": 0
+  },
+  "spawners": {
+    "creature": [
+      {
+        "type": "tsow:clock",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 8
+      }
+    ]
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": []
+}

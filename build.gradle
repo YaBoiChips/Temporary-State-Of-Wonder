@@ -29,6 +29,21 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+    maven {
+        name = 'GeckoLib'
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        content {
+            includeGroup("software.bernie.geckolib")
+        }
+    }
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+    }
+    maven {
+        url = "https://maven.isxander.dev/releases"
+        name = "Xander Maven"
+    }
 }
 
 dependencies {
@@ -36,7 +51,14 @@ dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings loom.officialMojangMappings()
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-    modImplementation "curse.maven:profiler-1108365:5750979"
+    modRuntimeOnly "curse.maven:profiler-1108365:5750979"
+    modRuntimeOnly "curse.maven:fabric-disable-custom-worlds-advice-401978:5510699"
+    modRuntimeOnly "curse.maven:cull-less-leaves-619718:5831042"
+    modRuntimeOnly "maven.modrinth:sodium:mc1.21.1-0.6.3-fabric"
+    modRuntimeOnly "maven.modrinth:iris:1.8.1+1.21.1-fabric"
+    modClientCompileOnly "maven.modrinth:axiom:4.2.0"
+    modRuntimeOnly "dev.isxander:yet-another-config-lib:3.6.1+1.21-fabric"
+    modImplementation "software.bernie.geckolib:geckolib-fabric-${minecraft_version}:${geckolib_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }
 

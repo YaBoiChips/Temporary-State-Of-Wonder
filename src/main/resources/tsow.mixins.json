@@ -4,6 +4,8 @@
   "package": "yaboichips.tsow.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "EntityMixin",
+    "LivingEntityMixin",
     "PigMixin"
   ],
   "injectors": {

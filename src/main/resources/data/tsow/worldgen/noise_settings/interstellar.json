@@ -5,14 +5,14 @@
   "ore_veins_enabled": false,
   "legacy_random_source": true,
   "default_block": {
-    "Name": "minecraft:stone"
+    "Name": "minecraft:white_concrete"
   },
   "default_fluid": {
     "Name": "minecraft:air"
   },
   "noise": {
     "min_y": -64,
-    "height": 192,
+    "height": 48,
     "size_horizontal": 1,
     "size_vertical": 1
   },
@@ -82,7 +82,7 @@
                       },
                       "argument2": {
                         "type": "minecraft:add",
-                        "argument1": -0.85,
+                        "argument1": -0.1,
                         "argument2": "minecraft:nether/base_3d_noise"
                       }
                     }
@@ -132,44 +132,7 @@
         "then_run": {
           "type": "minecraft:block",
           "result_state": {
-            "Name": "minecraft:stone"
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:y_above",
-          "anchor": {
-            "absolute": -63
-          },
-          "surface_depth_multiplier": 0,
-          "add_stone_depth": false
-        },
-        "then_run": {
-          "type": "minecraft:block",
-          "result_state": {
-            "Name": "minecraft:deepslate",
-            "Properties": {
-              "axis": "x"
-            }
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:y_above",
-          "anchor": {
-            "absolute": -64
-          },
-          "surface_depth_multiplier": 0,
-          "add_stone_depth": false
-        },
-        "then_run": {
-          "type": "minecraft:block",
-          "result_state": {
-            "Name": "minecraft:bedrock"
+            "Name": "minecraft:white_concrete"
           }
         }
       }

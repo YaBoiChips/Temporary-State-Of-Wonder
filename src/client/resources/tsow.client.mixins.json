@@ -4,7 +4,6 @@
   "package": "yaboichips.tsow.client.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "LevelRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "tsow:large_pond",
+      "weight": 1
+    },
+    {
+      "structure": "tsow:small_pond",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 7,
+    "separation": 6,
+    "salt": 13456
+  }
+}

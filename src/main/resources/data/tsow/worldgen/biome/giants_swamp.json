@@ -1,0 +1,31 @@
+{
+  "carvers": {},
+  "downfall": 0.9,
+  "effects": {
+    "fog_color": 408587,
+    "foliage_color": 6975545,
+    "grass_color_modifier": "swamp",
+    "sky_color": 11979691,
+    "water_color": 6388580,
+    "water_fog_color": 2302743
+  },
+  "features": [
+    [
+      "minecraft:trees_swamp",
+      "minecraft:flower_swamp",
+      "minecraft:patch_grass_normal",
+      "minecraft:patch_dead_bush",
+      "minecraft:patch_waterlily",
+      "minecraft:brown_mushroom_swamp",
+      "minecraft:red_mushroom_swamp",
+      "minecraft:brown_mushroom_normal",
+      "minecraft:red_mushroom_normal",
+      "minecraft:patch_sugar_cane_swamp",
+      "tsow:snowdrop"
+    ]
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {},
+  "temperature": 0.8
+}
