@@ -3,10 +3,7 @@ package yaboichips.tsow.core;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.component.SuspiciousStewEffects;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FlowerBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -29,6 +26,7 @@ public class TSoWBlocks {
     public static final Block THALLIUM = registerMetal("thallium");
     public static final Block TILE = registerMetal("tile");
     public static final Block TIN = registerMetal("tin");
+    public static final Block SAND_LAYER = register(new SnowLayerBlock(BlockBehaviour.Properties.of().mapColor(MapColor.SAND).replaceable().forceSolidOff().randomTicks().strength(0.1F).requiresCorrectToolForDrops().sound(SoundType.SAND).isViewBlocking((blockStatex, blockGetter, blockPos) -> blockStatex.getValue(SnowLayerBlock.LAYERS) >= 8).pushReaction(PushReaction.DESTROY)), "sand_layer");
     public static final Block STASIS_BLOCK = register(new StasisBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ENCHANTING_TABLE)), "stasis");
     public static final Block SNOWDROP = register(new FlowerBlock(MobEffects.NIGHT_VISION, 5.0F, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY).lightLevel(light -> 8)), "snowdrop");
 

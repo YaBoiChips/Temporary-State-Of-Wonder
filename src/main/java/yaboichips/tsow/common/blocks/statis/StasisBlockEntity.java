@@ -63,15 +63,14 @@ public class StasisBlockEntity extends BlockEntity implements GeoBlockEntity {
     public static void tick(Level level, BlockPos blockPos, BlockState blockState, StasisBlockEntity be) {
         if (level instanceof ServerLevel sLevel) {
             if (be.isActivated()) {
-                System.out.println(be.currentTick);
                 be.currentTick++;
                 if (be.currentTick % INTERVAL == 0) {
                     // Calculate pitch and particle radius
                     float pitch = Mth.lerp((float) be.currentTick / DURATION, 0.5f, 2.0f);
-                    float particleRadius = Mth.lerp((float) be.currentTick / DURATION, 1.0f, 5.0f);
+                    float particleRadius = Mth.lerp((float) be.currentTick / DURATION, 1.0f, 20.0f);
 
                     // Play sound
-                    level.playSound(null, blockPos, SoundEvents.BELL_BLOCK, SoundSource.BLOCKS, 1.0f, pitch);
+                    level.playSound(null, blockPos, SoundEvents.NOTE_BLOCK_BELL.value(), SoundSource.BLOCKS, 1.0f, pitch);
 
                     // Spawn particles
                     spawnSmokeParticles(sLevel, blockPos, particleRadius);
@@ -97,7 +96,7 @@ public class StasisBlockEntity extends BlockEntity implements GeoBlockEntity {
             double offsetZ = (world.random.nextDouble() - 0.5) * radius;
 
             world.sendParticles(
-                    ParticleTypes.CAMPFIRE_SIGNAL_SMOKE,
+                    ParticleTypes.POOF,
                     center.getX() + 0.5 + offsetX,
                     center.getY() + 1.0 + offsetY,
                     center.getZ() + 0.5 + offsetZ,
