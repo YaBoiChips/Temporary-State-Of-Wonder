@@ -22,7 +22,7 @@
       "model": "tsow:block/sand_height14"
     },
     "layers=8": {
-      "model": "tsow:block/sand_block"
+      "model": "minecraft:block/sand"
     }
   }
 }
