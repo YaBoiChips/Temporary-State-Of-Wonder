@@ -9,5 +9,15 @@
     "sounds": [
       "tsow:clock_die"
     ]
+  },
+  "swamp_loop": {
+    "sounds": [
+      "tsow:world/swamp_loop"
+    ]
+  },
+  "wind_loop": {
+    "sounds": [
+      "tsow:world/wind_loop"
+    ]
   }
 }
