@@ -28,6 +28,8 @@ public class TSoWClient implements ClientModInitializer {
 
     public static final ResourceLocation CUSTOM_SKY_TEXTURE = ResourceLocation.fromNamespaceAndPath(MODID, "textures/sky/sky.png");
     public static final ResourceLocation CUSTOM_PLANET_TEXTURE = ResourceLocation.fromNamespaceAndPath(MODID, "textures/sky/planet.png");
+    public static final ResourceLocation CUSTOM_PLANET_TEXTURE2 = ResourceLocation.fromNamespaceAndPath(MODID, "textures/sky/planet2.png");
+    public static final ResourceLocation CUSTOM_PLANET_TEXTURE3 = ResourceLocation.fromNamespaceAndPath(MODID, "textures/sky/planet3.png");
 
     public static ResourceKey<Level> INTERSTELLAR = ResourceKey.create(Registries.DIMENSION, ResourceLocation.fromNamespaceAndPath(MODID, "interstellar"));
     public static ResourceKey<Level> ABANDONMENT = ResourceKey.create(Registries.DIMENSION, ResourceLocation.fromNamespaceAndPath(MODID, "abandonment"));
@@ -61,7 +63,10 @@ public class TSoWClient implements ClientModInitializer {
         DimensionRenderingRegistry.registerSkyRenderer(ABANDONMENT, (worldRenderContext) -> {
             PoseStack poseStack = new PoseStack();
             poseStack.mulPose(worldRenderContext.positionMatrix());
-            renderSimpleObject(CUSTOM_PLANET_TEXTURE, -90, 100, poseStack);
+            renderSimpleObject(CUSTOM_PLANET_TEXTURE, 0,-90, 100, poseStack);
+            renderSimpleObject(CUSTOM_PLANET_TEXTURE2, 0,120, 600, poseStack);
+            renderSimpleObject(CUSTOM_PLANET_TEXTURE3, 35,188, 500, poseStack);
+
         });
     }
 }

@@ -55,7 +55,7 @@ public class SkyRenderer {
         RenderSystem.disableBlend();
     }
 
-    public static void renderSimpleObject(ResourceLocation objectTexturePath, float angle, float size, PoseStack poseStack) {
+    public static void renderSimpleObject(ResourceLocation objectTexturePath, float zAngle,float xAngle, float size, PoseStack poseStack) {
         Tesselator tessellator = Tesselator.getInstance();
         RenderSystem.enableBlend();
         RenderSystem.depthMask(false);
@@ -63,16 +63,17 @@ public class SkyRenderer {
         RenderSystem.setShaderTexture(0, objectTexturePath);
         poseStack.pushPose();
 
-        poseStack.mulPose(com.mojang.math.Axis.ZP.rotationDegrees(angle));
+        poseStack.mulPose(com.mojang.math.Axis.ZP.rotationDegrees(zAngle));
+        poseStack.mulPose(com.mojang.math.Axis.XP.rotationDegrees(xAngle));
 
         Matrix4f matrix4f = poseStack.last().pose();
 
         BufferBuilder bufferbuilder = tessellator.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR);
 
         bufferbuilder.addVertex(matrix4f, -100.0F/*Up and Down texture size*/, -size/*Size of the texture or Distance from the player*/, -100.0F/*Left to right texture size*/).setUv(0.0F/*Horizontal Axis*/, 0.0F/*Vertical Axis*/).setColor(255, 45, 45, 155);
-        bufferbuilder.addVertex(matrix4f, -100.0F, -size, 100.0F).setUv(0.0F, 1.0F).setColor(100, 100, 100, 255);
-        bufferbuilder.addVertex(matrix4f, 100.0F, -size, 100.0F).setUv(1.0F, 1.0F).setColor(100, 100, 100, 255);
-        bufferbuilder.addVertex(matrix4f, 100.0F, -size, -100.0F).setUv(1.0F, 0.0F).setColor(100, 100, 100, 255);
+        bufferbuilder.addVertex(matrix4f, -100.0F, -size, 100.0F).setUv(0.0F, 1.0F).setColor(255, 255, 255, 255);
+        bufferbuilder.addVertex(matrix4f, 100.0F, -size, 100.0F).setUv(1.0F, 1.0F).setColor(255, 255, 255, 255);
+        bufferbuilder.addVertex(matrix4f, 100.0F, -size, -100.0F).setUv(1.0F, 0.0F).setColor(255, 255, 255, 255);
         BufferUploader.drawWithShader(bufferbuilder.buildOrThrow());
         poseStack.popPose();
 

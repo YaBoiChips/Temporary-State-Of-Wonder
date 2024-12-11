@@ -1,7 +1,7 @@
 {
   "type": "minecraft:jigsaw",
   "biomes": "tsow:abandonment",
-  "step": "local_modifications",
+  "step": "surface_structures",
   "spawn_overrides": {},
   "start_pool": "tsow:floor_tile",
   "size": 1,
