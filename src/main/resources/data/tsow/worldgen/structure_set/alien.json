@@ -15,11 +15,11 @@
   ],
   "placement": {
     "type": "minecraft:random_spread",
-    "spacing": 15,
-    "separation": 14,
+    "spacing": 16,
+    "separation": 15,
     "exclusion_zone": {
       "other_set": "tsow:mountains",
-      "chunk_count": 16
+      "chunk_count": 6
     },
     "salt": 13986
   }

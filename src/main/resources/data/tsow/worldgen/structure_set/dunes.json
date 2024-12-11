@@ -1,10 +1,6 @@
 {
   "structures": [
     {
-      "structure": "tsow:dune1",
-      "weight": 1
-    },
-    {
       "structure": "tsow:dune2",
       "weight": 1
     },
@@ -15,11 +11,11 @@
   ],
   "placement": {
     "type": "minecraft:random_spread",
-    "spacing": 15,
+    "spacing": 13,
     "separation": 10,
     "exclusion_zone": {
       "other_set": "tsow:mountains",
-      "chunk_count": 16
+      "chunk_count": 6
     },
     "salt": 134343211456
   }
