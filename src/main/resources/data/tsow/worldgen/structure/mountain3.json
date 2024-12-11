@@ -1,7 +1,7 @@
 {
   "type": "minecraft:jigsaw",
   "biomes": "tsow:abandonment",
-  "step": "lakes",
+  "step": "raw_generation",
   "spawn_overrides": {},
   "start_pool": "tsow:mountain3",
   "size": 1,

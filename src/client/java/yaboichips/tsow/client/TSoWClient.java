@@ -20,13 +20,17 @@ import yaboichips.tsow.core.TSoWEntities;
 
 import java.util.HashMap;
 
+import static yaboichips.tsow.client.util.SkyRenderer.renderSimpleObject;
 import static yaboichips.tsow.client.util.SkyRenderer.renderSky;
 
 public class TSoWClient implements ClientModInitializer {
     public static final String MODID = "tsow";
 
     public static final ResourceLocation CUSTOM_SKY_TEXTURE = ResourceLocation.fromNamespaceAndPath(MODID, "textures/sky/sky.png");
+    public static final ResourceLocation CUSTOM_PLANET_TEXTURE = ResourceLocation.fromNamespaceAndPath(MODID, "textures/sky/planet.png");
+
     public static ResourceKey<Level> INTERSTELLAR = ResourceKey.create(Registries.DIMENSION, ResourceLocation.fromNamespaceAndPath(MODID, "interstellar"));
+    public static ResourceKey<Level> ABANDONMENT = ResourceKey.create(Registries.DIMENSION, ResourceLocation.fromNamespaceAndPath(MODID, "abandonment"));
 
     public HashMap<Block, RenderType> BLOCKS = new HashMap<>();
 
@@ -53,6 +57,11 @@ public class TSoWClient implements ClientModInitializer {
             PoseStack poseStack = new PoseStack();
             poseStack.mulPose(worldRenderContext.positionMatrix());
             renderSky(poseStack);
+        });
+        DimensionRenderingRegistry.registerSkyRenderer(ABANDONMENT, (worldRenderContext) -> {
+            PoseStack poseStack = new PoseStack();
+            poseStack.mulPose(worldRenderContext.positionMatrix());
+            renderSimpleObject(CUSTOM_PLANET_TEXTURE, -90, 100, poseStack);
         });
     }
 }
