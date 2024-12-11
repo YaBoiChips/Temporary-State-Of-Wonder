@@ -27,6 +27,8 @@ public class TSoWClient implements ClientModInitializer {
     public static final String MODID = "tsow";
 
     public static final ResourceLocation CUSTOM_SKY_TEXTURE = ResourceLocation.fromNamespaceAndPath(MODID, "textures/sky/sky.png");
+    public static final ResourceLocation AB_SKY_TEXTURE = ResourceLocation.fromNamespaceAndPath(MODID, "textures/sky/abandonment_sky.png");
+
     public static final ResourceLocation CUSTOM_PLANET_TEXTURE = ResourceLocation.fromNamespaceAndPath(MODID, "textures/sky/planet.png");
     public static final ResourceLocation CUSTOM_PLANET_TEXTURE2 = ResourceLocation.fromNamespaceAndPath(MODID, "textures/sky/planet2.png");
     public static final ResourceLocation CUSTOM_PLANET_TEXTURE3 = ResourceLocation.fromNamespaceAndPath(MODID, "textures/sky/planet3.png");
@@ -58,15 +60,15 @@ public class TSoWClient implements ClientModInitializer {
         DimensionRenderingRegistry.registerSkyRenderer(INTERSTELLAR, (worldRenderContext) -> {
             PoseStack poseStack = new PoseStack();
             poseStack.mulPose(worldRenderContext.positionMatrix());
-            renderSky(poseStack);
+            renderSky(CUSTOM_SKY_TEXTURE, poseStack, 2.0f);
         });
         DimensionRenderingRegistry.registerSkyRenderer(ABANDONMENT, (worldRenderContext) -> {
             PoseStack poseStack = new PoseStack();
             poseStack.mulPose(worldRenderContext.positionMatrix());
+            renderSky(AB_SKY_TEXTURE, poseStack, 1.0f);
             renderSimpleObject(CUSTOM_PLANET_TEXTURE, 0,-90, 100, poseStack);
-            renderSimpleObject(CUSTOM_PLANET_TEXTURE2, 0,120, 600, poseStack);
+            renderSimpleObject(CUSTOM_PLANET_TEXTURE2, -50,130, 600, poseStack);
             renderSimpleObject(CUSTOM_PLANET_TEXTURE3, 35,188, 500, poseStack);
-
         });
     }
 }

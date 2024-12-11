@@ -12,11 +12,11 @@ import static yaboichips.tsow.client.TSoWClient.CUSTOM_SKY_TEXTURE;
 
 public class SkyRenderer {
 
-    public static void renderSky(PoseStack poseStack) {
+    public static void renderSky(ResourceLocation texture, PoseStack poseStack, float UV) {
         RenderSystem.enableBlend();
         RenderSystem.depthMask(false);
         RenderSystem.setShader(GameRenderer::getPositionTexColorShader);
-        RenderSystem.setShaderTexture(0, CUSTOM_SKY_TEXTURE);
+        RenderSystem.setShaderTexture(0, texture);
         Tesselator tesselator = Tesselator.getInstance();
 
         for (int i = 0; i < 6; ++i) {
@@ -44,9 +44,9 @@ public class SkyRenderer {
             Matrix4f matrix4f = poseStack.last().pose();
             BufferBuilder bufferBuilder = tesselator.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR);
             bufferBuilder.addVertex(matrix4f, -100.0F, -100.0F, -100.0F).setUv(0.0F, 0.0F).setColor(255, 255, 255, 255);
-            bufferBuilder.addVertex(matrix4f, -100.0F, -100.0F, 100.0F).setUv(0.0F, 2.0F).setColor(255, 255, 255, 255);
-            bufferBuilder.addVertex(matrix4f, 100.0F, -100.0F, 100.0F).setUv(2.0F, 2.0F).setColor(255, 255, 255, 255);
-            bufferBuilder.addVertex(matrix4f, 100.0F, -100.0F, -100.0F).setUv(2.0F, 0.0F).setColor(255, 255, 255, 255);
+            bufferBuilder.addVertex(matrix4f, -100.0F, -100.0F, 100.0F).setUv(0.0F, UV).setColor(255, 255, 255, 255);
+            bufferBuilder.addVertex(matrix4f, 100.0F, -100.0F, 100.0F).setUv(UV, UV).setColor(255, 255, 255, 255);
+            bufferBuilder.addVertex(matrix4f, 100.0F, -100.0F, -100.0F).setUv(UV, 0.0F).setColor(255, 255, 255, 255);
             BufferUploader.drawWithShader(bufferBuilder.buildOrThrow());
             poseStack.popPose();
         }
