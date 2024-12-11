@@ -1,0 +1,27 @@
+{
+  "structures": [
+    {
+      "structure": "tsow:clock1",
+      "weight": 1
+    },
+    {
+      "structure": "tsow:clock2",
+      "weight": 1
+    },    {
+      "structure": "tsow:clock3",
+      "weight": 1
+    },    {
+      "structure": "tsow:clock4",
+      "weight": 1
+    },    {
+      "structure": "tsow:clock5",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 5,
+    "separation": 4,
+    "salt": 123456
+  }
+}
