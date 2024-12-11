@@ -9,10 +9,6 @@
     "type": "minecraft:random_spread",
     "spacing": 1,
     "separation": 0,
-    "exclusion_zone": {
-      "other_set": "tsow:mountains",
-      "chunk_count": 16
-    },
     "salt": 123456
   }
 }
