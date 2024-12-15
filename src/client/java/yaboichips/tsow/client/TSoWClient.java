@@ -13,6 +13,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import yaboichips.tsow.client.renderers.ClockRenderer;
+import yaboichips.tsow.client.renderers.GiantRenderer;
 import yaboichips.tsow.client.renderers.StasisBlockRenderer;
 import yaboichips.tsow.core.TSoWBlockEntities;
 import yaboichips.tsow.core.TSoWBlocks;
@@ -52,6 +53,8 @@ public class TSoWClient implements ClientModInitializer {
 
     public void registerRenderers() {
         EntityRendererRegistry.register(TSoWEntities.CLOCK, ClockRenderer::new);
+        EntityRendererRegistry.register(TSoWEntities.GIANT, GiantRenderer::new);
+
         BlockEntityRenderers.register(TSoWBlockEntities.STASIS_BLOCK_ENTITY, StasisBlockRenderer::new);
 
     }

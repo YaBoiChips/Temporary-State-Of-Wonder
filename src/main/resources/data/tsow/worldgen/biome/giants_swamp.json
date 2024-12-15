@@ -26,6 +26,15 @@
   ],
   "has_precipitation": true,
   "spawn_costs": {},
-  "spawners": {},
+  "spawners": {
+    "creature": [
+      {
+        "type": "minecraft:frog",
+        "maxCount": 5,
+        "minCount": 3,
+        "weight": 15
+      }
+    ]
+  },
   "temperature": 0.8
 }

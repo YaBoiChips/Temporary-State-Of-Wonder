@@ -1,4 +1,4 @@
-package yaboichips.tsow.common.clockentity;
+package yaboichips.tsow.common.entities;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;

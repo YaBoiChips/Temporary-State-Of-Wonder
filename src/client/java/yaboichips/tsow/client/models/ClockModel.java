@@ -2,7 +2,7 @@ package yaboichips.tsow.client.models;
 
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.GeoModel;
-import yaboichips.tsow.common.clockentity.ClockEntity;
+import yaboichips.tsow.common.entities.ClockEntity;
 
 import static yaboichips.tsow.TSoW.MODID;
 

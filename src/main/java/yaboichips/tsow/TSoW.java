@@ -20,9 +20,8 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.phys.Vec3;
-import software.bernie.geckolib.GeckoLib;
-import software.bernie.geckolib.util.GeckoLibUtil;
-import yaboichips.tsow.common.clockentity.ClockEntity;
+import yaboichips.tsow.common.entities.ClockEntity;
+import yaboichips.tsow.common.entities.GiantEntity;
 import yaboichips.tsow.core.TSoWBlocks;
 import yaboichips.tsow.core.TSoWEntities;
 import yaboichips.tsow.core.TSoWSounds;
@@ -58,6 +57,7 @@ public class TSoW implements ModInitializer {
 
     public void registerAttributes() {
         FabricDefaultAttributeRegistry.register(TSoWEntities.CLOCK, ClockEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(TSoWEntities.GIANT, GiantEntity.createAttributes());
     }
 
     public void registerSounds() {
