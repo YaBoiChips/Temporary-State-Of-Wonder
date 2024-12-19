@@ -12,12 +12,17 @@
   },
   "swamp_loop": {
     "sounds": [
-      "tsow:world/swamp_loop"
+      "tsow:swamp_loop"
     ]
   },
   "wind_loop": {
     "sounds": [
-      "tsow:world/wind_loop"
+      "tsow:wind_loop"
+    ]
+  },
+  "startup": {
+    "sounds": [
+      "tsow:startup"
     ]
   }
 }

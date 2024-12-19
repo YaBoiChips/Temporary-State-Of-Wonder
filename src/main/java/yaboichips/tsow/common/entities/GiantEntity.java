@@ -89,7 +89,7 @@ public class GiantEntity extends Monster implements GeoEntity {
         pos.forEach(pos1 -> {
             if (this.level().isInWorldBounds(pos1)) {
                 BlockState state = level().getBlockState(pos1);
-                if (state.getTags().toList().contains(BlockTags.LOGS) || state.getTags().toList().contains(BlockTags.LEAVES)) {
+                if (state.getTags().toList().contains(BlockTags.LOGS) || state.getTags().toList().contains(BlockTags.LEAVES) || state.getTags().toList().contains(BlockTags.MINEABLE_WITH_HOE)|| state.getTags().toList().contains(BlockTags.REPLACEABLE)) {
                     Block.dropResources(state, level(), pos1);
                     level().setBlockAndUpdate(pos1, Blocks.AIR.defaultBlockState());
                 }
@@ -103,7 +103,13 @@ public class GiantEntity extends Monster implements GeoEntity {
                 .add(Attributes.MAX_HEALTH, 20f)
                 .add(Attributes.MOVEMENT_SPEED, 0.5F)
                 .add(Attributes.ATTACK_DAMAGE, 7.0)
-                .add(Attributes.FOLLOW_RANGE, 48.0);
+                .add(Attributes.FOLLOW_RANGE, 48.0)
+                .add(Attributes.STEP_HEIGHT, 3);
+    }
+
+    @Override
+    protected BlockPos getPrimaryStepSoundBlockPos(BlockPos blockPos) {
+        return super.getPrimaryStepSoundBlockPos(blockPos);
     }
 
     @Override

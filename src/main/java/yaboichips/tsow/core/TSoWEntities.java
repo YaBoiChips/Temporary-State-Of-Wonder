@@ -18,5 +18,5 @@ public class TSoWEntities {
 
     public static final EntityType<GiantEntity> GIANT = Registry.register(BuiltInRegistries.ENTITY_TYPE,
             ResourceLocation.fromNamespaceAndPath(MODID, "giant"),
-            EntityType.Builder.of(GiantEntity::new, MobCategory.MONSTER).sized(1.7f, 6f).build("giant"));
+            EntityType.Builder.of(GiantEntity::new, MobCategory.MONSTER).sized(1.5f, 6f).build("giant"));
 }

@@ -19,12 +19,24 @@
     {
       "structure": "tsow:medium_tree",
       "weight": 1
+    },
+    {
+      "structure": "tsow:building1",
+      "weight": 1
+    },
+    {
+      "structure": "tsow:building2",
+      "weight": 1
+    },
+    {
+      "structure": "tsow:building3",
+      "weight": 1
     }
   ],
   "placement": {
     "type": "minecraft:random_spread",
     "spacing": 2,
     "separation": 1,
-    "salt": 13456
+    "salt": 131456
   }
 }

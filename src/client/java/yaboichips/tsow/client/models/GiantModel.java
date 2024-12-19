@@ -1,12 +1,7 @@
 package yaboichips.tsow.client.models;
 
 import net.minecraft.resources.ResourceLocation;
-import org.jetbrains.annotations.Nullable;
-import software.bernie.geckolib.animation.AnimationState;
-import software.bernie.geckolib.cache.object.GeoBone;
-import software.bernie.geckolib.loading.json.raw.Bone;
 import software.bernie.geckolib.model.GeoModel;
-import software.bernie.geckolib.model.data.EntityModelData;
 import yaboichips.tsow.common.entities.GiantEntity;
 
 import static yaboichips.tsow.TSoW.MODID;
