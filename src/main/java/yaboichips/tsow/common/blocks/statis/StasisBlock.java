@@ -2,6 +2,7 @@ package yaboichips.tsow.common.blocks.statis;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -21,7 +22,10 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
+import yaboichips.tsow.TSoW;
 import yaboichips.tsow.core.TSoWBlockEntities;
+import yaboichips.tsow.core.TSoWItems;
+import yaboichips.tsow.core.TSoWSounds;
 
 public class StasisBlock extends BaseEntityBlock implements EntityBlock {
     public StasisBlock(Properties properties) {
@@ -41,7 +45,8 @@ public class StasisBlock extends BaseEntityBlock implements EntityBlock {
 
     @Override
     protected ItemInteractionResult useItemOn(ItemStack itemStack, BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
-        if (level.getBlockEntity(blockPos) instanceof StasisBlockEntity be){
+        if (level.getBlockEntity(blockPos) instanceof StasisBlockEntity be && itemStack.is(TSoWItems.KEY)){
+            level.playSound(null, blockPos, TSoWSounds.STARTUP, SoundSource.BLOCKS, 1f, 1f);
             be.setActivated(true);
         }
         return ItemInteractionResult.SUCCESS;
@@ -64,11 +69,6 @@ public class StasisBlock extends BaseEntityBlock implements EntityBlock {
         shape = Shapes.join(shape, Shapes.box(0.125, 0.3125, 0.375, 0.3125, 0.5, 0.625), BooleanOp.OR);
         shape = Shapes.join(shape, Shapes.box(0.6875, 0.3125, 0.375, 0.875, 0.5, 0.625), BooleanOp.OR);
         shape = Shapes.join(shape, Shapes.box(0.375, 0.3125, 0.6875, 0.625, 0.5, 0.875), BooleanOp.OR);
-//        shape = Shapes.join(shape, Shapes.box(0.4375, 0.375, 0.125, 0.5625, 1, 0.25), BooleanOp.OR);
-//        shape = Shapes.join(shape, Shapes.box(0.75, 0.375, 0.4375, 0.875, 1, 0.5625), BooleanOp.OR);
-//        shape = Shapes.join(shape, Shapes.box(0.125, 0.375, 0.4375, 0.25, 1, 0.5625), BooleanOp.OR);
-//        shape = Shapes.join(shape, Shapes.box(0.4375, 0.375, 0.75, 0.5625, 1, 0.875), BooleanOp.OR);
-
         return shape;
     }
 

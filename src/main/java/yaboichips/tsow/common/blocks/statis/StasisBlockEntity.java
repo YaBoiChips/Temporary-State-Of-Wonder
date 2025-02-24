@@ -11,12 +11,16 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import software.bernie.geckolib.animatable.GeoBlockEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.animation.*;
+import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.animation.AnimationController;
+import software.bernie.geckolib.animation.PlayState;
+import software.bernie.geckolib.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 import yaboichips.tsow.TSoW;
 import yaboichips.tsow.core.TSoWBlockEntities;
@@ -66,11 +70,7 @@ public class StasisBlockEntity extends BlockEntity implements GeoBlockEntity {
                 be.currentTick++;
                 if (be.currentTick % INTERVAL == 0) {
                     // Calculate pitch and particle radius
-                    float pitch = Mth.lerp((float) be.currentTick / DURATION, 0.5f, 2.0f);
                     float particleRadius = Mth.lerp((float) be.currentTick / DURATION, 1.0f, 20.0f);
-
-                    // Play sound
-                    level.playSound(null, blockPos, SoundEvents.NOTE_BLOCK_BELL.value(), SoundSource.BLOCKS, 1.0f, pitch);
 
                     // Spawn particles
                     spawnSmokeParticles(sLevel, blockPos, particleRadius);
@@ -107,10 +107,27 @@ public class StasisBlockEntity extends BlockEntity implements GeoBlockEntity {
     }
 
     private static void teleportPlayers(ServerLevel world, BlockPos center) {
+        int radius = 1;
         AABB effectArea = new AABB(center).inflate(30); // 30-block radius
         for (Player player : world.getEntitiesOfClass(Player.class, effectArea)) {
             if (player instanceof ServerPlayer sPlayer) {
-                sPlayer.teleportTo(world.getServer().getLevel(TSoW.INTERSTELLAR), 0, -16, 0, 0, 0);
+                if (player.level().dimension() == Level.OVERWORLD) {
+                    sPlayer.teleportTo(world.getServer().getLevel(TSoW.INTERSTELLAR), 0, -16, 0, 0, 0);
+                } else if (player.level().dimension() == TSoW.INTERSTELLAR) {
+                    sPlayer.teleportTo(world.getServer().getLevel(TSoW.GIANTS_SWAMP), 0, -16, 0, 0, 0);
+                } else if (player.level().dimension() == TSoW.GIANTS_SWAMP) {
+                    sPlayer.teleportTo(world.getServer().getLevel(TSoW.ABANDONMENT), 0, -16, 0, 0, 0);
+                } else if (player.level().dimension() == TSoW.ABANDONMENT) {
+                    sPlayer.teleportTo(world.getServer().getLevel(Level.OVERWORLD), 0, 65, 0, 0, 0);
+                }
+                for (int x = -radius; x <= radius; x++) {
+                    for (int y = 0; y <= radius; y++) {
+                        for (int z = -radius; z <= radius; z++) {
+                            BlockPos targetPos = sPlayer.blockPosition().offset(x, y, z);
+                            world.setBlockAndUpdate(targetPos, Blocks.AIR.defaultBlockState());
+                        }
+                    }
+                }
             }
         }
     }

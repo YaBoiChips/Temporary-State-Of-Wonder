@@ -51,16 +51,14 @@ public class TSoWClient implements ClientModInitializer {
 
     public HashMap<Block, RenderType> BLOCKS = new HashMap<>();
 
-    private final Map<UUID, Integer> playerTicksInDimension = new HashMap<>();
     private final Map<ResourceKey<Level>, AbstractTickableSoundInstance> dimensionSounds = new HashMap<>();
     private final Map<UUID, AbstractTickableSoundInstance> activeSounds = new HashMap<>();
-
 
     @Override
     public void onInitializeClient() {
         // Register sounds for specific dimensions
-        registerDimensionSound(GIANTS_SWAMP, new SwampTickableSound(SoundInstance.createUnseededRandom()));
-        registerDimensionSound(ABANDONMENT, new WindTickableSound(SoundInstance.createUnseededRandom()));
+        registerDimensionSound(GIANTS_SWAMP, new SwampTickableSound());
+        registerDimensionSound(ABANDONMENT, new WindTickableSound());
 
         // Hook into the client tick to handle dimension sounds
         renderSkys();
