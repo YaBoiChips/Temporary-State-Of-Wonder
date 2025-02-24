@@ -24,6 +24,7 @@ import yaboichips.tsow.common.entities.ClockEntity;
 import yaboichips.tsow.common.entities.GiantEntity;
 import yaboichips.tsow.core.TSoWBlocks;
 import yaboichips.tsow.core.TSoWEntities;
+import yaboichips.tsow.core.TSoWItems;
 import yaboichips.tsow.core.TSoWSounds;
 
 public class TSoW implements ModInitializer {
@@ -72,6 +73,12 @@ public class TSoW implements ModInitializer {
     public void registerItems() {
         TSoWBlocks.BLOCKS.forEach((block, resourceLocation) -> {
             Item item = new BlockItem(block, new Item.Properties());
+            Registry.register(BuiltInRegistries.ITEM, resourceLocation, item);
+            ItemGroupEvents.modifyEntriesEvent(TAB_KEY).register(itemGroup -> {
+                itemGroup.prepend(item);
+            });
+        });
+        TSoWItems.ITEMS.forEach((item, resourceLocation) -> {
             Registry.register(BuiltInRegistries.ITEM, resourceLocation, item);
             ItemGroupEvents.modifyEntriesEvent(TAB_KEY).register(itemGroup -> {
                 itemGroup.prepend(item);

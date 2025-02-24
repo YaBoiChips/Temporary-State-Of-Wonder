@@ -1,5 +1,7 @@
 {
   "block.tsow.cracked_tile": "Cracked Tile",
   "block.tsow.stasis": "Stasis Machine",
+  "item.tsow.key": "Stasis Machine Key",
+  "item.tsow.time_dust": "Time Dust",
   "itemGroup.tsow": "Temporary State of Wonder"
 }
