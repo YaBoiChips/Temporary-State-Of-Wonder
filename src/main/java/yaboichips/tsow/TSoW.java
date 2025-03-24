@@ -33,12 +33,10 @@ public class TSoW implements ModInitializer {
 
     public static final float Y_MOTION_MULTIPLIER = 0.95F;
     public static final float JUMP_HEIGHT_MODIFIER = 11F;
-
-
     public static final ResourceKey<CreativeModeTab> TAB_KEY = ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(MODID, "tab"));
 
     public static final CreativeModeTab TAB = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(Items.ACACIA_BOAT))
+            .icon(() -> new ItemStack(TSoWItems.KEY))
             .title(Component.translatable("itemGroup.tsow"))
             .build();
 
@@ -55,6 +53,7 @@ public class TSoW implements ModInitializer {
         registerBlocks();
         registerItems();
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TAB_KEY, TAB);
+
     }
 
     public void registerAttributes() {
@@ -67,7 +66,9 @@ public class TSoW implements ModInitializer {
     }
 
     public void registerBlocks() {
-        TSoWBlocks.BLOCKS.forEach((block, resourceLocation) -> Registry.register(BuiltInRegistries.BLOCK, resourceLocation, block));
+        TSoWBlocks.BLOCKS.forEach((block, resourceLocation) -> {
+            Registry.register(BuiltInRegistries.BLOCK, resourceLocation, block);
+        });
     }
 
     public void registerItems() {

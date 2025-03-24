@@ -32,7 +32,13 @@
         "type": "minecraft:frog",
         "maxCount": 5,
         "minCount": 3,
-        "weight": 15
+        "weight": 60
+      },
+      {
+        "type": "tsow:giant",
+        "weight": 30,
+        "minCount": 2,
+        "maxCount": 3
       }
     ]
   },

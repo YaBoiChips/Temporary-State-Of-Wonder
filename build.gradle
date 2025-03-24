@@ -55,7 +55,6 @@ dependencies {
     modLocalRuntime "curse.maven:fabric-disable-custom-worlds-advice-401978:5510699"
     modLocalRuntime "curse.maven:cull-less-leaves-619718:5831042"
     modLocalRuntime "maven.modrinth:sodium:mc1.21.1-0.6.3-fabric"
-    modLocalRuntime "maven.modrinth:worldgen-devtools:1.1.0+1.21.1"
     modLocalRuntime "dev.isxander:yet-another-config-lib:3.6.1+1.21-fabric"
     modImplementation "software.bernie.geckolib:geckolib-fabric-${minecraft_version}:${geckolib_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"

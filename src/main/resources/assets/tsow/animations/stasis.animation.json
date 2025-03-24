@@ -6,21 +6,21 @@
 			"bones": {
 				"Main": {
 					"rotation": {
-						"1.4": {
+						"0.96": {
 							"vector": [0, 0, 0]
 						},
-						"11.28": {
-							"vector": [0, -3782.5, 0],
-							"easing": "easeInCubic"
+						"11.16": {
+							"vector": [0, -30172.5, 0],
+							"easing": "easeInSine"
 						}
 					}
 				},
 				"N2": {
 					"rotation": {
-						"0.32": {
+						"0.0": {
 							"vector": [0, 0, 0]
 						},
-						"0.64": {
+						"0.92": {
 							"vector": [20, 0, 0],
 							"easing": "easeInQuad"
 						}
@@ -28,10 +28,10 @@
 				},
 				"E2": {
 					"rotation": {
-						"0.72": {
+						"0.0": {
 							"vector": [0, 0, 0]
 						},
-						"1.04": {
+						"0.92": {
 							"vector": [0, 0, -22.5],
 							"easing": "easeInCubic"
 						}
@@ -42,7 +42,7 @@
 						"0.0": {
 							"vector": [0, 0, 0]
 						},
-						"0.28": {
+						"0.92": {
 							"vector": [0, 0, 20],
 							"easing": "easeInQuad"
 						}
@@ -50,12 +50,12 @@
 				},
 				"S2": {
 					"rotation": {
-						"1.12": {
+						"0.0": {
 							"vector": [0, 0, 0]
 						},
-						"1.44": {
+						"0.96": {
 							"vector": [-22.5, 0, 0],
-							"easing": "easeInCubic"
+							"easing": "easeInSine"
 						}
 					}
 				}

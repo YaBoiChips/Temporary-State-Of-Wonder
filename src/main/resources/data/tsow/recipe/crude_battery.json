@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "tsow:thallium"
+    },
+    "T": {
+      "item": "tsow:aluminium"
+    },
+    "A": {
+      "item": "tsow:tin"
+    }
+  },
+  "pattern": [
+    "TAT",
+    "A#A",
+    "TAT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "tsow:crude_battery"
+  }
+}

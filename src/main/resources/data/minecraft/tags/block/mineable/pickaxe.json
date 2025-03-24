@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+     "tsow:dark_panel",
+     "tsow:light_panel",
+     "tsow:tin",
+     "tsow:stasis",
+     "tsow:light_tile",
+     "tsow:aluminium",
+     "tsow:cracked_tile",
+     "tsow:thallium",
+     "tsow:tile",
+     "tsow:dark_tile"
+  ]
+}

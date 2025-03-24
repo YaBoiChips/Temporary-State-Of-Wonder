@@ -1,7 +1,24 @@
 {
   "block.tsow.cracked_tile": "Cracked Tile",
   "block.tsow.stasis": "Stasis Machine",
+  "block.tsow.thallium": "Thallium",
+  "block.tsow.aluminium": "Aluminium",
+  "block.tsow.tin": "Tin",
+  "block.tsow.dark_tile": "Dark Tile",
+  "block.tsow.light_tile": "Light Tile",
+  "block.tsow.light_panel": "Light Panel",
+  "block.tsow.tile": "Tile",
+  "block.tsow.snowdrop": "Snowdrop",
+  "block.tsow.dark_panel": "Dark Panel",
+
   "item.tsow.key": "Stasis Machine Key",
   "item.tsow.time_dust": "Time Dust",
+  "item.tsow.time": "Time",
+  "item.tsow.time_clump": "Time Clump",
+  "item.tsow.crude_battery": "Crude Battery",
+  "item.tsow.giants_heart": "Giants Heart",
+  "entity.tsow.clock": "Clock",
+  "entity.tsow.giant": "Giant",
+
   "itemGroup.tsow": "Temporary State of Wonder"
 }
